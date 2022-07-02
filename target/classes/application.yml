@@ -1,0 +1,23 @@
+server:
+  address: localhost
+  port: 9999
+dubbo:
+  application:
+    name: user-passport-service-provider
+  registry:
+    #注册中心
+    timeout: 5000
+    address: zookeeper://127.0.0.1:2181
+  #协议
+  protocol:
+    name: dubbo
+    port: 20914
+  #指定定扫描的基础包
+  scan:
+    base-packages: cn.edu.test.service
+spring:
+  datasource:
+    username: root
+    password: 123456789
+    url: jdbc:mysql://127.0.0.1:3306/user_passport?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
